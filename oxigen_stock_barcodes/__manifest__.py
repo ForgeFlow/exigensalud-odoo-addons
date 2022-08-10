@@ -11,6 +11,7 @@
     "depends": ["stock_barcodes"],
     "data": [
         "views/stock_picking_type_views.xml",
+        "wizards/stock_barcodes_read_picking_views.xml",
     ],
     "installable": True,
     "license": "AGPL-3",
