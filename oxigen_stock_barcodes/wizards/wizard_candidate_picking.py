@@ -1,11 +1,7 @@
 # Copyright 2022 ForgeFlow S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
 
-import logging
-
 from odoo import models
-
-_logger = logging.getLogger(__name__)
 
 
 class WizCandidatePicking(models.TransientModel):
