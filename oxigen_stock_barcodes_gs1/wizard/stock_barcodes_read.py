@@ -12,6 +12,12 @@ _logger = logging.getLogger(__name__)
 class WizStockBarcodesRead(models.AbstractModel):
     _inherit = "wiz.stock.barcodes.read"
 
+    def process_lot(self, barcode_decoded):
+        res = super().process_lot(barcode_decoded)
+        if self.lot_id:
+            self.product_qty += 1
+        return res
+
     # WARNING: override standard method
     def process_barcode(self, barcode):
         """Only has been implemented AI (01, 02, 10, 37), so is possible that
