@@ -14,7 +14,7 @@ class WizStockBarcodesRead(models.AbstractModel):
 
     def process_lot(self, barcode_decoded):
         res = super().process_lot(barcode_decoded)
-        if self.lot_id:
+        if self.lot_id and (self.manual_entry or self.is_manual_qty):
             self.product_qty += 1
         return res
 
